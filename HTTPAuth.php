@@ -29,16 +29,16 @@ class HTTPAuth {
 	 * <code>
 	 * 
 	 * function getPassword($account) {
-	 *     if (strcmp('hoge', $account) === 0) {
-	 *         return 'password';
+	 *     if (strcmp('foo', $account) === 0) {
+	 *         return 'bar';
 	 *     }
 	 *     return false;
 	 * }
 	 * 
-	 * $realm = 'Please input your account name.';
+	 * $realm = 'Please input your user name & password.';
 	 * $callback = 'getPassword';
 	 * 
-	 * if (self::basic($realm, $callback)) {
+	 * if (HTTPAuth::basic($realm, $callback)) {
 	 *     echo 'ok.':
 	 * } else {
 	 *     echo 'failed.';
@@ -84,10 +84,10 @@ class HTTPAuth {
 	 *     return false;
 	 * }
 	 * 
-	 * $realm = 'Please input your account name.';
+	 * $realm = 'Please input your user name & password.';
 	 * $callback = 'getPassword';
 	 * 
-	 * if (self::digest($realm, $callback)) {
+	 * if (HTTPAuth::digest($realm, $callback)) {
 	 *     echo 'ok.':
 	 * } else {
 	 *     echo 'failed.';
